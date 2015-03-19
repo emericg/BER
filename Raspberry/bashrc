@@ -60,7 +60,6 @@ else
 fi
 
 ###############################################################################
-
 ## Greetings!
 
 c1="$(tput sgr0)$(tput setaf 4)" # blue
@@ -76,19 +75,21 @@ DATE="$(tput setaf 2)[$(tput setaf 7)$(date)$(tput setaf 2)]"
 # Show kernel info
 KERNEL="$(tput setaf 2)[$(tput setaf 7)$(uname -srmn)$(tput setaf 2)]"
 
-# BER server daemon status
-BER_SRV=`/usr/bin/ps -aux | grep [b]er`
+# BER and Metabot server daemon status
+BER_SRV=`/usr/bin/ps -aux | grep [b]er_server`
+BOT_SRV=`/usr/bin/ps -aux | grep [M]etaBotServer`
+
 if [[ ${BER_SRV} ]]; then
-    BER_SRV="$(tput setaf 2)[$(tput setaf 7)BER server is $c5 running$(tput sgr0)$(tput setaf 7)!$(tput setaf 2)]"
+    SRV="$(tput setaf 2)[$(tput setaf 7)BER server is $(c5)running$(tput sgr0)$(tput setaf 7)!$(tput setaf 2)]"
 else
-    BER_SRV="$(tput bold)$(tput setaf 2)[$(tput setaf 7)BER server is $c4 NOT running...$(tput bold)$(tput setaf 2)]"
+    SRV="$(tput bold)$(tput setaf 2)[$(tput setaf 7)BER server is $(c4)NOT running...$(tput bold)$(tput setaf 2)]"
 fi
 
 echo "        $c2.$c1"
-echo "       $c2/$c1#$c2\\$c3   Backyard Exploration Rover"
-echo "      $c2/$c1###$c2\\$c3    Powered by Archlinux!"
+echo "       $c2/$c1#$c2\\$c3   Raspberry *ROBOT edition"
+echo "      $c2/$c1###$c2\\$c3    Powered by Arch Linux!"
 echo "     $c2/$c1#####$c2\\$c1"
 echo "    $c2/$c1##,-,##$c2\\$c1  $DATE "
 echo "   $c2/$c1##(   )##$c2\\$c1   $KERNEL"
-echo "  $c2/$c1#.--   --.#$c2\\$c1    $BER_SRV" $'\n'
+echo "  $c2/$c1#.--   --.#$c2\\$c1    $SRV" $'\n'
 tput sgr0
