@@ -28,7 +28,7 @@ Stuffs
 Current pictures
 ----------------
 
-[More pictures of the rover's construction process!](https://plus.google.com/photos/101185732573156177059/albums/6068481997539252241?authkey=CLeOiI2225a_Pg)
+[More pictures of the rover's construction process!](https://goo.gl/photos/q5VVHt7DxcdGtxKx9)
 
 ![Front](http://i.imgur.com/jtiGUgm.jpg)
 
